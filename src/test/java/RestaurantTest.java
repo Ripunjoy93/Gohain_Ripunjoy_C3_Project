@@ -67,4 +67,13 @@ class RestaurantTest {
                 ()->restaurant.removeFromMenu("French fries"));
     }
     //<<<<<<<<<<<<<<<<<<<<<<<MENU>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    @Test
+    public void select_item_from_list_should_return_order_cost(){
+        creatMockRestaurantToAvoidRepetition();
+        int totalCost;
+        List<Item> selectedItems = null;
+        totalCost = restaurant.getTotalCost(selectedItems);
+        assertEquals(0, totalCost);
+    }
 }

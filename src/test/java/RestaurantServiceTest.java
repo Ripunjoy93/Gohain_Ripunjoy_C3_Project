@@ -24,7 +24,9 @@ class RestaurantServiceTest {
     public void searching_for_existing_restaurant_should_return_expected_restaurant_object() throws restaurantNotFoundException {
         //WRITE UNIT TEST CASE HERE
         creatMockRestaurantToAvoidRepetition();
-        assertEquals(restaurant.getName(), service.findRestaurantByName("Amelie's cafe").getName());
+//        assertEquals(restaurant.getName(), service.findRestaurantByName("Amelie's cafe").getName());
+//        After Feedback: searching_for_existing_restaurant_should_return_expected_restaurant_object, should have two attributes to compare based on assertions.
+        assertEquals(restaurant, service.findRestaurantByName("Amelie's cafe"));
     }
 
     //You may watch the video by Muthukumaran on how to write exceptions in Course 3: Testing and Version control: Optional content
